@@ -1,0 +1,1241 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+  $("#har"+$("#wioski option:selected").val()+"_2018").show();
+  //var adr = ;
+  $("#linkhar").html("<a href=\"har"+$("#wioski option:selected").val()+"_2018.pdf\">Pobierz harmonogram w formacie .pdf</a>");
+  $("#wioski").change(function() {
+    $(".ukryjtabele").hide();
+	$("#har"+$("#wioski option:selected").val()+"_2018").show();
+	var adr = "<a href=\"har"+$("#wioski option:selected").val()+"_2018.pdf\">Pobierz harmonogram w formacie .pdf</a>";
+   	$("#linkhar").html(adr);
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>Wybierz miejscowość:</h2>
+
+<select id="wioski">
+ <option value="2">Boguszewo</option>
+ <option value="4">Boguszki</option>
+ <option value="5">Brzeziny</option>
+ <option value="5">Budy</option>
+ <option value="4">Chojnowo</option>
+ <option value="5">Dobarz</option>
+ <option value="5">Giełczyn</option>
+ <option value="5">Gugny</option>
+ <option value="5">Kleszcze</option>
+ <option value="5">Kołodziej</option>
+ <option value="3">Korczak</option>
+ <option value="3">Krynica</option>
+ <option value="5">Laskowiec</option>
+ <option value="4">Milewo</option>
+ <option value="4">Mroczki</option>
+ <option value="6">Niewarowo</option>
+ <option value="6">Nowa Wieś</option>
+ <option value="2">Nowa Wieś kolonia</option>
+ <option value="4">Pisanki</option>
+ <option value="3">Stare Bajki</option>
+ <option value="5">Stójka</option>
+ <option value="3">Szorce</option>
+ <option value="1">Trzcianne</option>
+ <option value="4">Wilamówka</option>
+ <option value="3">Wyszowate</option>
+ <option value="5">Zajki</option>
+ <option value="2">Zubole</option>
+ <option value="6">Zucielec </option>
+ <option value="1">Zucielec kolonia</option>
+</select> 
+
+<table id="har1_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Trzcianne, Kolonia Zucielec</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">25 kwietnia 2018 oraz 29 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>10</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>9</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>9</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>10</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>10</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>9</p>
+</td>
+<td valign="top">
+<p>22</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>7</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="har2_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Zubole, Boguszewo, kolonia Nowa Wieś</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">25 kwietnia 2018 oraz 29 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>10</p>
+</td>
+<td valign="top">
+<p>22</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>10</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="har3_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Szorce, Wyszowate, Krynica, Stare Bajki, Korczak</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">26 kwietnia 2018 oraz 30 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>29</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>29</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>18</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>21</p>
+</td>
+<td valign="top">
+<p>31</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="har4_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Chojnowo, Mroczki, Wilamówka, Boguszki, Milewo, Pisanki</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">25 kwietnia 2018 oraz 29 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>18</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>19</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>15</p>
+</td>
+<td valign="top">
+<p>22</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="har5_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Kleszcze, Zajki, Kołodziej, Giełczyn, Laskowiec, Brzeziny, Gugny, Stójka, Budy, Dobarz</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">25 kwietnia 2018 oraz 29 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>21</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>18</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>21</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>22</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>19</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>20</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table id="har6_2018" border="1" cellspacing="1" cellpadding="0" style="display: none" class="ukryjtabele">
+<tbody>
+<tr>
+<td rowspan="3" valign="top">
+<p>Miejscowość bbbbb</p>
+</td>
+<td colspan="4" valign="top">
+<p>Terminy Odbiorów 2018 r</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">
+<p>Miesiąc</p>
+</td>
+<td valign="top">
+<p>Zmieszane</p>
+</td>
+<td valign="top">
+<p>Segregacja</p>
+</td>
+<td valign="top">
+<p>Popiół</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+<td valign="top">
+<p>Dzień</p>
+</td>
+</tr>
+<tr>
+<td rowspan="12" valign="top">
+<p align="center">Nowa Wieś, Zucielec, Niewiarowo</p>
+<p align="center">Zbiórka odpadów wielkogabarytowych np. stare meble, wersalki, dywany itp., sprzęt elektroniczny i elektryczny (kompletny) np. lodówki, pralki, komputery, odkurzacze itp. będą zbierane:</p>
+<p align="center">26 kwietnia 2018 oraz 30 październik 2018.</p>
+<p align="center">Jednocześnie zwracamy uwagę iż zbiórka odbywa się od godz. 7.00 sprzęty wystawione później nie będą zabrane.</p>
+<p align="center">Prosimy o wystawienie w/w odpadów przed posesjami w sposób nieutrudniający przejazdu.</p>
+</td>
+<td valign="top">
+<p>Styczeń</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Luty</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Marzec</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>29</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Kwiecień</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">
+<p>30</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Maj</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>29</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Czerwiec</p>
+</td>
+<td valign="top">
+<p>13</p>
+</td>
+<td valign="top">
+<p>26</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Lipiec</p>
+</td>
+<td valign="top">
+<p>12</p>
+</td>
+<td valign="top">
+<p>24</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Sierpień</p>
+</td>
+<td valign="top">
+<p>16</p>
+</td>
+<td valign="top">
+<p>28</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wrzesień</p>
+</td>
+<td valign="top">
+<p>17</p>
+</td>
+<td valign="top">
+<p>25</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Październik</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>23</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Listopad</p>
+</td>
+<td valign="top">
+<p>14</p>
+</td>
+<td valign="top">
+<p>27</p>
+</td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Grudzień</p>
+</td>
+<td valign="top">
+<p>11</p>
+</td>
+<td valign="top">
+<p>21</p>
+</td>
+<td valign="top">
+<p>31</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p align="center">Informacja</p>
+<p>W celu sprawnego przeprowadzenia zbiórki odpadów wielkogabarytowych, zużytego sprzętu elektronicznego i elektrycznego oraz opon zwracamy się do <strong>właścicieli nieruchomości położonych w zabudowie kolonijnej</strong> o zgłoszenie odbioru odpadów osobiście w Urzędzie Gminy Trzcianne pokój nr 8 lub telefoniczne 85 738 50 56 wew. 28</p>
+
+<div id="tresc">
+ <a id="linkhar" href="http://trzcianne.pl/images/stories/dopobrania/harmonogram/har1_2018.pdf">Pobierz harmonogram w formacie .pdf</a>
+</div>
+
+</body>
+</html>

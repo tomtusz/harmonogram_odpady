@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+//pobieranie wygenerowanego harmonogramu
+function downloadCSV(csv,filename) {
+	var data, link;
+	if (csv == null) return;
+	var blob = new Blob([csv], {type: "text/csv;charset=utf-8;"});
+	if (navigator.msSaveBlob){ // IE 10+
+		navigator.msSaveBlob(blob, filename)
+	}
+	else{
+		var link = document.createElement("a");
+		if (link.download !== undefined){
+
+			// feature detection, Browsers that support HTML5 download attribute
+			var url = URL.createObjectURL(blob);
+			link.setAttribute("href", url);
+			link.setAttribute("download", filename);
+			link.style = "visibility:hidden";
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+		}
+	}
+}
+
+//generowanie harmonogramu
+function generuj(){
+	var tx="Subject, Start Date, Start Time, End Date, End Time, All Day Event, Location\n";
+	var calydzien = $('input[name=calydzien]:checked').val();
+	var wioska = $("#wioski option:selected").text();
+	
+	
+	$.getJSON('harm.json',function(r){	
+		
+		var s =r['har'+$("#wioski option:selected").val()];
+		if( $('input[name=rodzaj][value="0"]').prop('checked')==true){
+			$.each(s.zmieszane, function(j,s){ 
+				tx =tx+$("#opis0").val()+","+s+",7:00 AM,"+s+", 6:00 PM, "+calydzien+", "+wioska+"\n";				
+			})
+		}
+		if( $('input[name=rodzaj][value="1"]').prop('checked')==true){
+			$.each(s.segregowane, function(j,s){
+				tx =tx+$("#opis1").val()+","+s+",7:00 AM,"+s+", 6:00 PM, "+calydzien+", "+wioska+"\n";				
+			})
+		}
+		if( $('input[name=rodzaj][value="2"]').prop('checked')==true){
+			$.each(s.popiol, function(j,s){
+				tx =tx+$("#opis2").val()+","+s+",7:00 AM,"+s+", 6:00 PM, "+calydzien+", "+wioska+"\n";				
+			})
+		}
+		if( $('input[name=rodzaj][value="3"]').prop('checked')==true){
+			$.each(s.gabaryt, function(j,s){
+				tx =tx+$("#opis3").val()+","+s+",7:00 AM,"+s+", 6:00 PM, "+calydzien+", "+wioska+"\n";				
+			})
+		}
+		$("#message").text(tx);
+	});
+	
+	//console.log("zmiana");
+		
+	
+ }
+
+$(document).ready(function(){
+ 
+ // tworzenie elementów wyboru rodzajów wywozu
+ 
+ var rodzodp = {"opis":["Wywóz odpadów zmieszanych","Wywóz odpadów segregowanych","Wywóz popiołu","Wywóz odpadów wielkogabarytowych"],
+				"rodzaj":["Zmmieszane","Segregowene","Popiół ","Wielkogabarytowe"]
+};
+  
+ for(var i=0;i<rodzodp.opis.length;i++){
+	//dodawanie elementów
+	$("#rodzaje").add("<div id=\"rodzajediv"+i+"\"></div>").appendTo("#rodzaje");
+	$("#rodzajediv"+i).add("<input type=\"checkbox\" name=\"rodzaj\" value=\""+i+"\" checked=\"checked\" /> <span>"+rodzodp.rodzaj[i]+" - opis:</span>").appendTo("#rodzajediv"+i);
+	$("#rodzajediv"+i).add("<input id=\"opis"+i+"\" name=\"opisrodzaj\" type=\"text\" value=\""+rodzodp.opis[i]+"\">").appendTo("#rodzajediv"+i);
+	$("#rodzajediv"+i).add("<button id=\"domyslny"+i+"\" value=\""+i+"\">przywróć</button>").appendTo("#rodzajediv"+i);
+	
+	//dodawanie zdarzeń
+	//--------- zmiana harmonogramu przy edycji własnego opisu
+	$("#opis"+i).keyup(function(){
+		generuj();
+	});
+	
+	 //--------- przywracanie domyślnego opisu i zmiana harmonogramu
+	$("#domyslny"+i).click(function(){
+		$("#opis"+this.value).val(rodzodp.opis[this.value]);
+		generuj();
+	});
+ }
+
+ //zmiana aktywności opisu zdarzenia
+  $('input[name=rodzaj]').change(function(){
+	$("#opis"+this.value).prop('disabled', !this.checked);
+	$("#domyslny"+this.value).prop('disabled', !this.checked);
+ }); 
+ //------------zmiana aktywności opisu zdarzenia-----------
+ 
+ 
+ //pierwsza generacja na podstawie zastanych parametrów
+ generuj();
+ //generacja na zmianę parametrów
+ $("#harmdiv").children().change(function(){
+	generuj();
+ }); 
+ // pobieranie harmonogramu na podstawie parametrów
+ $("#pobierz").click(function(){
+	downloadCSV($("#message").text(),$("#wioski option:selected").text()+'_harmonogram_wywozu_odpadow_2018.csv');
+ }); 
+
+ 
+ 
+});
+</script>
+</head>
+<body>
+<h2>Eksport harmonogramu wywozu odpadów komunalnych do kalendarza google:</h2>
+<p>Aby pobrać harmonogram należy ustawić jego parametry. W oknie wyświetli się podgląd gotowego pliku do importu do kalendarza. Gdy harmonogram będzie gotowy należy pobrać do klikając przycisk <strong>Pobierz plik CSV</strong>. Z zapisanym plikiem należy postępować zgodnie z <a href="https://support.google.com/calendar/answer/37118?hl=pl" rel="noopener noreferrer" target="_blank">instrukcja importu. </a>
+</p>
+
+<div id="harmdiv">
+<em>Wybierz miejscowość:</em><br />
+<select id="wioski">
+	<option value="2">Boguszewo</option>
+	<option value="4">Boguszki</option>
+	<option value="5">Brzeziny</option>
+	<option value="5">Budy</option>
+	<option value="4">Chojnowo</option>
+	<option value="5">Dobarz</option>
+	<option value="5">Giełczyn</option>
+	<option value="5">Gugny</option>
+	<option value="5">Kleszcze</option>
+	<option value="5">Kołodziej</option>
+	<option value="3">Korczak</option>
+	<option value="3">Krynica</option>
+	<option value="5">Laskowiec</option>
+	<option value="4">Milewo</option>
+	<option value="4">Mroczki</option>
+	<option value="6">Niewarowo</option>
+	<option value="6">Nowa Wieś</option>
+	<option value="2">Nowa Wieś kolonia</option>
+	<option value="4">Pisanki</option>
+	<option value="3">Stare Bajki</option>
+	<option value="5">Stójka</option>
+	<option value="3">Szorce</option>
+	<option value="1">Trzcianne</option>
+	<option value="4">Wilamówka</option>
+	<option value="3">Wyszowate</option>
+	<option value="5">Zajki</option>
+	<option value="2">Zubole</option>
+	<option value="6">Zucielec</option>
+	<option value="1">Zucielec kolonia</option>
+</select>
+<br /> <br />
+<em>Czy zdarzenie całodniowe:</em><br /> 
+<input type="radio" name="calydzien" value="TRUE" checked="checked" />Tak 
+<input type="radio" name="calydzien" value="FALSE" />Nie<br /> 
+<br />
+
+<div id="rodzaje"><span><em>Rodzaj odbieranych odpadów:</em></span></div>
+<br />
+<button id="pobierz"><strong>Pobierz plik CSV</strong></button> <br /> 
+<span><br /><em>Podgląd pliku CSV:</em></span><br /> 
+<textarea id="message" rows="10" cols="75" disabled="disabled">
+Subject, Start Date, Start Time, End Date, End Time, All Day Event, Location
+</textarea></div>
+</body>
+</html>
